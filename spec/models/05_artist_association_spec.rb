@@ -1,3 +1,5 @@
+require 'pry'
+
 describe 'Artist Associations' do
   before do
     @prince = Artist.create(name: "Prince")
@@ -8,6 +10,7 @@ describe 'Artist Associations' do
   end
 
   it 'can build a song' do
+    binding.pry
     song = @prince.songs.build(name: "A Song By Prince")
     song.save
 
